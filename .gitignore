@@ -1,0 +1,18 @@
+# internal documents
+docs/NOTES.md
+docs/PROJECT_PLANS.md
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+.vscode/
+.idea/
