@@ -5,6 +5,7 @@ import { Role } from "@prisma/client";
 import { loginSchema, registerSchema, } from "../validations/auth.validations";
 import { comparePassword, hashPassword, } from "../utils/password";
 import { generateToken } from "../utils/jwt";
+import { validateInstitution } from "../utils/institution";
 
 // @desc Register a new user
 // @route POST /api/v1/auth/register
@@ -50,11 +51,9 @@ export const register = async (req: Request, res: Response) => {
             }
 
             const institution =
-                await prisma.institution.findUnique({
-                    where: {
-                        id: institutionId,
-                    },
-                });
+                await validateInstitution(
+                    institutionId
+                );
 
             if (!institution) {
                 return res.status(404).json({

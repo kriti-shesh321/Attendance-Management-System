@@ -172,6 +172,7 @@ Create a new batch.
 * 400 Bad Request
 * 401 Unauthorized
 * 403 Forbidden
+* 409 Conflict
 * 500 Internal Server Error
 
 ---
@@ -240,6 +241,7 @@ Join a batch with the invite token.
 * 401 Unauthorized
 * 403 Forbidden
 * 404 Not Found
+* 404 Conflict
 * 500 Internal Server Error
 
 ---
@@ -256,12 +258,18 @@ Retrieve batches under an Institution.
     {
         "id": "uuid",
         "name": "Batch A",
-        "created_by": {
+        "institution_id": "uuid",
+        "created_by": "uuid",
+        "created_at": "timestamp",
+        "institution": {
+            "id": "uuid",
+            "name": "name"
+        }
+        "creator": {
             "id": "uuid",
             "name": "name",
             "role": "trainer"
-        },
-        "created_at": "timestamp"
+        }
     }
 ]
 ```
@@ -309,6 +317,7 @@ Retrieve attendance summary for a batch.
     ]
 }
 ```
+
 ### Status Codes
 
 * 200 OK
@@ -377,6 +386,8 @@ Retrieve the active sessions for current user.
 [
     {
         "id": "uuid",
+        "batch_id": "uuid",
+        "trainer_id": "uuid",
         "title": "title",
         "batch": {
             "id": "uuid",
@@ -471,6 +482,7 @@ Mark attendance for a session.
     "marked_at": "timestamp"
 }
 ```
+
 ### Status Codes
 
 * 201 Created
