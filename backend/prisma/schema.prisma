@@ -1,0 +1,127 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  student
+  trainer
+  institution
+  programme_manager
+  monitoring_officer
+}
+
+enum AttendanceStatus {
+  present
+  absent
+  late
+}
+
+enum Region {
+  east
+  west
+  north
+  south
+}
+
+model User {
+  id              String   @id @default(uuid())
+  name            String
+  email           String   @unique
+  password_hash   String
+  role            Role
+  institution_id  String?
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  institution      Institution?   @relation(fields: [institution_id], references: [id])
+  created_batches  Batch[]        @relation("BatchCreator")
+  batch_students   BatchStudent[]
+  sessions         Session[]
+  attendance       Attendance[]
+
+}
+
+model Institution {
+  id          String   @id @default(uuid())
+  name        String 
+  region      Region
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  users       User[]
+  batches     Batch[]
+
+}
+
+model Batch {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  institution_id  String
+  created_by      String
+  created_at      DateTime @default(now())
+
+  institution      Institution   @relation(fields: [institution_id], references: [id])
+  creator          User          @relation("BatchCreator", fields: [created_by], references: [id])
+
+  students         BatchStudent[]
+  invites          BatchInvite[]
+  sessions         Session[]
+
+}
+
+model BatchStudent {
+  id          String   @id @default(uuid())
+  batch_id    String
+  student_id  String
+  created_at  DateTime @default(now())
+
+  batch       Batch @relation(fields: [batch_id], references: [id])
+  student     User  @relation(fields: [student_id], references: [id])
+
+  @@unique([batch_id, student_id])
+}
+
+model BatchInvite {
+  id          String    @id @default(uuid())
+  batch_id    String
+  token       String    @unique
+  created_at  DateTime  @default(now())
+  expires_at  DateTime?
+
+  batch       Batch @relation(fields: [batch_id], references: [id])
+
+}
+
+model Session {
+  id          String   @id @default(uuid())
+  batch_id    String
+  trainer_id  String
+  title       String
+  date        DateTime
+  start_time  DateTime
+  end_time    DateTime
+  created_at  DateTime @default(now())
+
+  batch       Batch @relation(fields: [batch_id], references: [id])
+  trainer     User  @relation(fields: [trainer_id], references: [id])
+
+  attendance  Attendance[]
+
+}
+
+model Attendance {
+  id          String             @id @default(uuid())
+  session_id  String
+  student_id  String
+  status      AttendanceStatus
+  marked_at   DateTime           @default(now())
+
+  session     Session @relation(fields: [session_id], references: [id])
+  student     User    @relation(fields: [student_id], references: [id])
+
+  @@unique([session_id, student_id])
+}
