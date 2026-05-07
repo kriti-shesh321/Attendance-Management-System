@@ -792,7 +792,7 @@
 							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMjRhYTlmNC02NTYxLTRhNGQtOWNkNi1iZThlYmY0MDAxM2IiLCJyb2xlIjoiaW5zdGl0dXRpb24iLCJpYXQiOjE3NzgxNTEzOTgsImV4cCI6MTc3ODc1NjE5OH0.7DVGzTjfTwIHzjr_Gg1nBeu6H1lLl6HLNJI37nVr_AU\",\n    \"user\": {\n        \"id\": \"b24aa9f4-6561-4a4d-9cd6-be8ebf40013b\",\n        \"name\": \"Tai MI\",\n        \"email\": \"tai@gmail.com\",\n        \"role\": \"institution\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_at\": \"2026-05-07T08:15:10.979Z\",\n        \"updated_at\": \"2026-05-07T08:15:10.979Z\"\n    }\n}"
 						},
 						{
-							"name": "Programme Officer Login Success Response",
+							"name": "Programme Manager Login Success Response",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -869,7 +869,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\": \"ink@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"raw": "{\n    \"email\": \"mitch@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -899,7 +899,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "462"
+									"value": "469"
 								},
 								{
 									"key": "Content-Type",
@@ -907,11 +907,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 07 May 2026 08:54:44 GMT"
+									"value": "Thu, 07 May 2026 13:11:20 GMT"
 								},
 								{
 									"key": "Etag",
-									"value": "W/\"1ce-tf09auzfQvWkcxjAlTm1owdXlPI\""
+									"value": "W/\"1d5-xwNfKDpsE6Oby+Kj37Y/X5jKusI\""
 								},
 								{
 									"key": "Server",
@@ -927,11 +927,11 @@
 								},
 								{
 									"key": "X-Railway-Request-Id",
-									"value": "q4Gju5NtTM2-LlZaVOLIQQ"
+									"value": "6TfWxST1QLiWMf0HacI7Nw"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmIwM2EyMC0wMjU4LTQ3YTgtYjkxMS0xYTlhMzMxNTMxYzYiLCJyb2xlIjoicHJvZ3JhbW1lX21hbmFnZXIiLCJpYXQiOjE3NzgxNDQwODQsImV4cCI6MTc3ODc0ODg4NH0.qA3P6y3n-B64Klo5wLJFvmrepZLUZYYfUyQLJFBz5HM\",\n    \"user\": {\n        \"id\": \"c6b03a20-0258-47a8-b911-1a9a331531c6\",\n        \"name\": \"Ink LI\",\n        \"email\": \"ink@gmail.com\",\n        \"role\": \"programme_manager\",\n        \"institution_id\": null,\n        \"created_at\": \"2026-05-07T08:50:06.560Z\",\n        \"updated_at\": \"2026-05-07T08:50:06.560Z\"\n    }\n}"
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMWFjMzMzNy04YmU3LTQ5MGMtYWJhMS04MDEwYWVhYjAyNzkiLCJyb2xlIjoibW9uaXRvcmluZ19vZmZpY2VyIiwiaWF0IjoxNzc4MTU5NDgwLCJleHAiOjE3Nzg3NjQyODB9.U3rXEOAI3lgrWL0uHooiWZtpg60h0Y-wviW4SHK4a5E\",\n    \"user\": {\n        \"id\": \"d1ac3337-8be7-490c-aba1-8010aeab0279\",\n        \"name\": \"Mitch Key\",\n        \"email\": \"mitch@gmail.com\",\n        \"role\": \"monitoring_officer\",\n        \"institution_id\": null,\n        \"created_at\": \"2026-05-07T08:51:35.828Z\",\n        \"updated_at\": \"2026-05-07T08:51:35.828Z\"\n    }\n}"
 						},
 						{
 							"name": "Zod Validation Error Response",
