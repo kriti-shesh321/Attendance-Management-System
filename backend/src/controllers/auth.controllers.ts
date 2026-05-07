@@ -8,7 +8,7 @@ import { generateToken } from "../utils/jwt";
 import { validateInstitution } from "../utils/institution";
 
 import { ZodError } from "zod";
-import { formatZodError } from "../utils/zor-error";
+import { formatZodError } from "../utils/zod-error";
 
 // @desc Register a new user
 // @route POST /api/v1/auth/register

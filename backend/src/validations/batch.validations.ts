@@ -2,8 +2,7 @@ import { z } from "zod";
 
 export const createBatchSchema =
     z.object({
-        name: z.string().min(2),
-        institution_id: z.uuid(),
+        name: z.string().min(2)
     });
 
 export const joinBatchSchema =

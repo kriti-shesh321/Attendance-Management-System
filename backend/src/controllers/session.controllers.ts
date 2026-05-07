@@ -3,7 +3,7 @@ import { Request, Response, } from "express";
 import { prisma } from "../config/prisma";
 
 import { createSessionSchema } from "../validations/session.validations";
-import { formatZodError } from "../utils/zor-error";
+import { formatZodError } from "../utils/zod-error";
 import { ZodError } from "zod";
 
 // @desc Create session

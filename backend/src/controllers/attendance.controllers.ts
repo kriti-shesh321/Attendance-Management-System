@@ -3,7 +3,7 @@ import { prisma } from "../config/prisma";
 
 import { markAttendanceSchema } from "../validations/attendance.validations";
 import { ZodError } from "zod";
-import { formatZodError } from "../utils/zor-error";
+import { formatZodError } from "../utils/zod-error";
 
 // @desc Mark attendance
 // @route POST /api/v1/attendance/mark

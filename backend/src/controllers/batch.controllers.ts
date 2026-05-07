@@ -2,11 +2,10 @@ import { Request, Response } from "express";
 import crypto from "crypto";
 
 import { prisma } from "../config/prisma";
-import { validateInstitution } from "../utils/institution";
 
 import { createBatchSchema, joinBatchSchema } from "../validations/batch.validations";
 import { ZodError } from "zod";
-import { formatZodError } from "../utils/zor-error";
+import { formatZodError } from "../utils/zod-error";
 
 
 // @desc Create a new batch
@@ -29,22 +28,21 @@ export const createBatch = async (
             return res.status(409).json({ message: "Batch name already exists." });
         }
 
-        const institution =
-            await validateInstitution(validatedData.institution_id);
+        const currentUser = await prisma.user.findUnique({
+            where: {
+                id: req.user!.userId,
+            },
+        });
 
-        if (!institution) {
-            return res.status(404).json({
-                message: "Institution not found.",
-            });
+        if (!currentUser?.institution_id) {
+            return res.status(400).json({ message: "User does not belong to an institution." });
         }
 
         const batch = await prisma.batch.create({
             data: {
                 name: validatedData.name,
-                institution_id:
-                    validatedData.institution_id,
-                created_by:
-                    req.user!.userId,
+                institution_id: currentUser.institution_id,
+                created_by: req.user!.userId,
             },
         });
 
