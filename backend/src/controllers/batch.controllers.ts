@@ -132,6 +132,16 @@ export const generateInvite = async (
             return res.status(403).json({ message: "Forbidden." });
         }
 
+        const existingInvite = await prisma.batchInvite.findFirst({
+            where: {
+                batch_id: batchId,
+            },
+        });
+
+        if (existingInvite) {
+            return res.status(409).json({ message: "Invite token already exists for this batch.", });
+        }
+
         const token = crypto.randomBytes(16).toString("hex");
 
         const invite =
