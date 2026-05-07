@@ -5,6 +5,8 @@ import { prisma } from "../config/prisma";
 import { validateInstitution } from "../utils/institution";
 
 import { createBatchSchema, joinBatchSchema } from "../validations/batch.validations";
+import { ZodError } from "zod";
+import { formatZodError } from "../utils/zor-error";
 
 
 // @desc Create a new batch
@@ -50,6 +52,10 @@ export const createBatch = async (
 
     } catch (error) {
         console.error(error);
+
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
 
         return res.status(500).json({ message: "Internal server error." });
     }
@@ -205,6 +211,11 @@ export const joinBatch = async (
 
     } catch (error) {
         console.error(error);
+
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
+
         return res.status(500).json({ message: "Internal server error." });
     }
 };

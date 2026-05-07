@@ -1,11 +1,10 @@
-import {
-    Request,
-    Response,
-} from "express";
+import { Request, Response, } from "express";
 
 import { prisma } from "../config/prisma";
 
 import { createSessionSchema } from "../validations/session.validations";
+import { formatZodError } from "../utils/zor-error";
+import { ZodError } from "zod";
 
 // @desc Create session
 // @route POST /api/v1/sessions
@@ -51,6 +50,11 @@ export const createSession = async (
 
     } catch (error) {
         console.error(error);
+
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
+
         return res.status(500).json({ message: "Internal server error." });
     }
 };

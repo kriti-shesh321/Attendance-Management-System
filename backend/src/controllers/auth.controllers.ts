@@ -7,6 +7,9 @@ import { comparePassword, hashPassword, } from "../utils/password";
 import { generateToken } from "../utils/jwt";
 import { validateInstitution } from "../utils/institution";
 
+import { ZodError } from "zod";
+import { formatZodError } from "../utils/zor-error";
+
 // @desc Register a new user
 // @route POST /api/v1/auth/register
 // @access Public
@@ -89,6 +92,11 @@ export const register = async (req: Request, res: Response) => {
         });
     } catch (error: any) {
         console.error("Error registering: ", error);
+
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
+
         return res.status(500).json({ message: "Internal server error." });
     }
 };
@@ -146,6 +154,11 @@ export const login = async (req: Request, res: Response) => {
         });
     } catch (error: any) {
         console.error("Error during logging in: ", error);
+
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
+
         return res.status(500).json({ message: "Internal server error." });
     }
 };

@@ -2,6 +2,8 @@ import { Request, Response, } from "express";
 import { prisma } from "../config/prisma";
 
 import { markAttendanceSchema } from "../validations/attendance.validations";
+import { ZodError } from "zod";
+import { formatZodError } from "../utils/zor-error";
 
 // @desc Mark attendance
 // @route POST /api/v1/attendance/mark
@@ -70,6 +72,10 @@ export const markAttendance = async (
     } catch (error) {
         console.error(error);
 
-        return res.status(500).json({ message: "Internal server error.", });
+        if (error instanceof ZodError) {
+            return res.status(400).json({ message: "Validation failed.", errors: formatZodError(error) });
+        }
+
+        return res.status(500).json({ message: "Internal server error." });
     }
 };
