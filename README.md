@@ -191,7 +191,7 @@ Detailed API documentation:
 ## 1. Clone Repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/kriti-shesh321/Attendance-Management-System
 ```
 
 ---
