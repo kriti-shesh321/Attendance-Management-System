@@ -150,8 +150,7 @@ Create a new batch.
 ### Request
 ```json
 {
-    "name": "Batch A",
-    "institution_id": "id",
+    "name": "Batch A"
 }
 ```
 

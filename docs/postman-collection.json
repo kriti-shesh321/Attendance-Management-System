@@ -1,0 +1,3267 @@
+{
+	"info": {
+		"_postman_id": "3296ac22-585c-462f-88fa-95b049f2f1ea",
+		"name": "Attendance Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17086606",
+		"_collection_link": "https://test44-4738.postman.co/workspace/test-Workspace~1e424714-dd83-4b78-8fb9-926335bd3fbf/collection/17086606-3296ac22-585c-462f-88fa-95b049f2f1ea?action=share&source=collection_link&creator=17086606"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Om Kir\",\n    \"email\": \"om@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"programme manager\",\n    \"institution_id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/auth/register",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Student Register Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Om Kir\",\n    \"email\": \"om@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"student\",\n    \"institution_id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:17:59 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"ed-LhxcYNNozLkJXPNiAWO2BHF+qu8\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "-5LRZ-rDT-aVL-PRoB_USg"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e5aae1db-3d35-4cab-ab4e-cc8a456310e0\",\n    \"name\": \"Om Kir\",\n    \"email\": \"om@gmail.com\",\n    \"role\": \"student\",\n    \"institution_id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\",\n    \"created_at\": \"2026-05-07T08:17:59.558Z\",\n    \"updated_at\": \"2026-05-07T08:17:59.558Z\"\n}"
+						},
+						{
+							"name": "Trainer Register Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Rishi Bhat\",\n    \"email\": \"rishi@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"trainer\",\n    \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:16:30 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f4-rwgLGOhsxt/55Mjzx0zdaRFYkNI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "WBQd9NokT0CKoY9ZAXC71g"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n    \"name\": \"Rishi Bhat\",\n    \"email\": \"rishi@gmail.com\",\n    \"role\": \"trainer\",\n    \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n    \"created_at\": \"2026-05-07T08:16:30.852Z\",\n    \"updated_at\": \"2026-05-07T08:16:30.852Z\"\n}"
+						},
+						{
+							"name": "Institution Resgister Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Tai MI\",\n    \"email\": \"tai@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"institution\",\n    \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:15:10 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f2-pdAWIv2JBXQEq/qQr+DSM0hQRls\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "mQl0XyYiTbu-ru-2VOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b24aa9f4-6561-4a4d-9cd6-be8ebf40013b\",\n    \"name\": \"Tai MI\",\n    \"email\": \"tai@gmail.com\",\n    \"role\": \"institution\",\n    \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n    \"created_at\": \"2026-05-07T08:15:10.979Z\",\n    \"updated_at\": \"2026-05-07T08:15:10.979Z\"\n}"
+						},
+						{
+							"name": "Programme Manager Register Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Ink LI\",\n    \"email\": \"ink@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"programme_manager\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:50:06 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"d6-v2p3oSkvFG6bYreO2Cb+UrTDkR0\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "mGhD3ym6Q8iSjpzC0ubPiw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"c6b03a20-0258-47a8-b911-1a9a331531c6\",\n    \"name\": \"Ink LI\",\n    \"email\": \"ink@gmail.com\",\n    \"role\": \"programme_manager\",\n    \"institution_id\": null,\n    \"created_at\": \"2026-05-07T08:50:06.560Z\",\n    \"updated_at\": \"2026-05-07T08:50:06.560Z\"\n}"
+						},
+						{
+							"name": "Monitoring Officer Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Mitch Key\",\n    \"email\": \"mitch@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"monitoring_officer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:51:35 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"dc-HZu7M/MotHnPGwSnBa84COHn3bo\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "_YqqapMATJ6q8Bm2oB_USg"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d1ac3337-8be7-490c-aba1-8010aeab0279\",\n    \"name\": \"Mitch Key\",\n    \"email\": \"mitch@gmail.com\",\n    \"role\": \"monitoring_officer\",\n    \"institution_id\": null,\n    \"created_at\": \"2026-05-07T08:51:35.828Z\",\n    \"updated_at\": \"2026-05-07T08:51:35.828Z\"\n}"
+						},
+						{
+							"name": "Zod Validation Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Aman Roy\",\n    \"email\": \"aman@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"programme manager\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:48:37 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"bd-ha3cdm4cqv2tLLiwcuLHF71+Dtw\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "NZrH5E6CTKOtseH30ubPiw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": [\n        {\n            \"field\": \"role\",\n            \"message\": \"Invalid option: expected one of \\\"student\\\"|\\\"trainer\\\"|\\\"institution\\\"|\\\"programme_manager\\\"|\\\"monitoring_officer\\\"\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "400 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Aman Roy\",\n    \"email\": \"aman@gmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"role\": \"programme_manager\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/register",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:49:18 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"22-K77tgAfbYkQE9Pz3KhcRuaoJEVs\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "-3_RWxwrT7OGVjPO0ubPiw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid credentials.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rishi@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/auth/login",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Student Login Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"om@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "472"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:53:44 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1d8-x5uuIiGGWUSnV6/e35o8fVKTX9c\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "Yya4xKjbQqaGE32TJH0Vcg"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNWFhZTFkYi0zZDM1LTRjYWItYWI0ZS1jYzhhNDU2MzEwZTAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc3ODE0NDAyNCwiZXhwIjoxNzc4NzQ4ODI0fQ.-F7RlwrtPsTBjgAsz25mt-UKGMBLLG1IH2UDKOd1n0Y\",\n    \"user\": {\n        \"id\": \"e5aae1db-3d35-4cab-ab4e-cc8a456310e0\",\n        \"name\": \"Om Kir\",\n        \"email\": \"om@gmail.com\",\n        \"role\": \"student\",\n        \"institution_id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\",\n        \"created_at\": \"2026-05-07T08:17:59.558Z\",\n        \"updated_at\": \"2026-05-07T08:17:59.558Z\"\n    }\n}"
+						},
+						{
+							"name": "Trainer Login Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rishi@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "479"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:56:40 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1df-NX+RO1f3z/qWpc0I1nyIjSkmZXA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "4Sj-kWsXTD2jT7OUVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE0NDIwMCwiZXhwIjoxNzc4NzQ5MDAwfQ.661EK9jbtv4Tu0Pz5dqxE97-ZbVbQvRegS1Hs9mRSII\",\n    \"user\": {\n        \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"name\": \"Rishi Bhat\",\n        \"email\": \"rishi@gmail.com\",\n        \"role\": \"trainer\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_at\": \"2026-05-07T08:16:30.852Z\",\n        \"updated_at\": \"2026-05-07T08:16:30.852Z\"\n    }\n}"
+						},
+						{
+							"name": "Institution Login Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"tai@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "482"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:56:38 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1e2-SRgT9/KZwfhVDFaDoWrbvwKPVR0\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "H0RYWWNbRWWfzmVvacI7Nw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMjRhYTlmNC02NTYxLTRhNGQtOWNkNi1iZThlYmY0MDAxM2IiLCJyb2xlIjoiaW5zdGl0dXRpb24iLCJpYXQiOjE3NzgxNTEzOTgsImV4cCI6MTc3ODc1NjE5OH0.7DVGzTjfTwIHzjr_Gg1nBeu6H1lLl6HLNJI37nVr_AU\",\n    \"user\": {\n        \"id\": \"b24aa9f4-6561-4a4d-9cd6-be8ebf40013b\",\n        \"name\": \"Tai MI\",\n        \"email\": \"tai@gmail.com\",\n        \"role\": \"institution\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_at\": \"2026-05-07T08:15:10.979Z\",\n        \"updated_at\": \"2026-05-07T08:15:10.979Z\"\n    }\n}"
+						},
+						{
+							"name": "Programme Officer Login Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"ink@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "462"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:32:31 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1ce-4ManKtsNV26o6I5yR3RT+7DUY0A\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "1HhsZIqSQs-nz5alipRofQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmIwM2EyMC0wMjU4LTQ3YTgtYjkxMS0xYTlhMzMxNTMxYzYiLCJyb2xlIjoicHJvZ3JhbW1lX21hbmFnZXIiLCJpYXQiOjE3NzgxNTM1NTEsImV4cCI6MTc3ODc1ODM1MX0.beE56hzAdZW5RDafoe0MAfLuCXIcwGUfaajIZ0DAZ80\",\n    \"user\": {\n        \"id\": \"c6b03a20-0258-47a8-b911-1a9a331531c6\",\n        \"name\": \"Ink LI\",\n        \"email\": \"ink@gmail.com\",\n        \"role\": \"programme_manager\",\n        \"institution_id\": null,\n        \"created_at\": \"2026-05-07T08:50:06.560Z\",\n        \"updated_at\": \"2026-05-07T08:50:06.560Z\"\n    }\n}"
+						},
+						{
+							"name": "Monitoring Ofiicer Login Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"ink@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "462"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:54:44 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1ce-tf09auzfQvWkcxjAlTm1owdXlPI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "q4Gju5NtTM2-LlZaVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmIwM2EyMC0wMjU4LTQ3YTgtYjkxMS0xYTlhMzMxNTMxYzYiLCJyb2xlIjoicHJvZ3JhbW1lX21hbmFnZXIiLCJpYXQiOjE3NzgxNDQwODQsImV4cCI6MTc3ODc0ODg4NH0.qA3P6y3n-B64Klo5wLJFvmrepZLUZYYfUyQLJFBz5HM\",\n    \"user\": {\n        \"id\": \"c6b03a20-0258-47a8-b911-1a9a331531c6\",\n        \"name\": \"Ink LI\",\n        \"email\": \"ink@gmail.com\",\n        \"role\": \"programme_manager\",\n        \"institution_id\": null,\n        \"created_at\": \"2026-05-07T08:50:06.560Z\",\n        \"updated_at\": \"2026-05-07T08:50:06.560Z\"\n    }\n}"
+						},
+						{
+							"name": "Zod Validation Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"ink@gmail.com\",\n    \"password\": \"qwert\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:55:19 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"7e-/pxb3icwC0XED8zcC+N1cwCK//w\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "6a1GpNMEQ7uDIurmVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation failed.\",\n    \"errors\": [\n        {\n            \"field\": \"password\",\n            \"message\": \"Too small: expected string to have >=6 characters\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "401 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"ik@gmail.com\",\n    \"password\": \"qwertyuiop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/login",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:55:56 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"21-dBEoW0UmTF+EGUMaprEp9/8zNNA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "p5nx8epcSkaqatowVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid credentials\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Current User Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MzY1NCwiZXhwIjoxNzc4NzU4NDU0fQ.3ajld8AYycd5Te4MVTWNM9QrCWN6hFgQC9VOVSKs0zY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/auth/me",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/me",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:58:26 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"126-3cJHRQjcPHA7QIe+tKZ+njzNdj8\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "gb2ahlfsQQ63sTL9DcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n    \"name\": \"Rishi Bhat\",\n    \"email\": \"rishi@gmail.com\",\n    \"role\": \"trainer\",\n    \"institution\": {\n        \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"name\": \"North Skill Academy\",\n        \"region\": \"north\"\n    },\n    \"created_at\": \"2026-05-07T08:16:30.852Z\",\n    \"updated_at\": \"2026-05-07T08:16:30.852Z\"\n}"
+						},
+						{
+							"name": "401 Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/auth/me",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 08:58:56 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1b-w4O8U+0Ll+sSArmfAX18RvhWpiQ\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "cTBdM4_eRCWGxgRmDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid token\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Institution",
+			"item": [
+				{
+					"name": "Institution List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/institutions",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"institutions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/institutions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"institutions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "516"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:16:45 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"204-tTjCjx7hqQmg0PG9x43mV0U03qE\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "K36DtEXFTUy4KqMqacI7Nw"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"name\": \"North Skill Academy\",\n        \"region\": \"north\",\n        \"created_at\": \"2026-05-06T14:01:59.961Z\",\n        \"updated_at\": \"2026-05-06T14:01:59.961Z\"\n    },\n    {\n        \"id\": \"27865f06-7a6b-432e-8967-ccbfa0cf7998\",\n        \"name\": \"South Future Institute\",\n        \"region\": \"south\",\n        \"created_at\": \"2026-05-06T14:02:01.966Z\",\n        \"updated_at\": \"2026-05-06T14:02:01.966Z\"\n    },\n    {\n        \"id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\",\n        \"name\": \"East Tech Center\",\n        \"region\": \"east\",\n        \"created_at\": \"2026-05-06T14:02:02.249Z\",\n        \"updated_at\": \"2026-05-06T14:02:02.249Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Batches",
+			"item": [
+				{
+					"name": "Create a batch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MzY1NCwiZXhwIjoxNzc4NzU4NDU0fQ.3ajld8AYycd5Te4MVTWNM9QrCWN6hFgQC9VOVSKs0zY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Batch J\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/batches",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"batches"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "409 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Batch INK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:44:05 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"28-GAuEumsZQHqFdsjHyujmXhN7PV0\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "DZVr0TRLR7WzlCcAAXC71g"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Batch name already exists.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Batch J\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:44:51 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"d2-8b+SrT8QW4rbjQsbkj0E8g0Sv94\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "OPdiGcj_QXWifl7yAXC71g"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"439253bb-e800-4aac-b295-61fcc750c1bd\",\n    \"name\": \"Batch J\",\n    \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n    \"created_by\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n    \"created_at\": \"2026-05-07T10:44:51.107Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate Invite Token For A Batch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MzY1NCwiZXhwIjoxNzc4NzU4NDU0fQ.3ajld8AYycd5Te4MVTWNM9QrCWN6hFgQC9VOVSKs0zY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/batches/4905a55c-fa6a-430e-ab8e-23b2e8d021c9/invite",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"batches",
+								"4905a55c-fa6a-430e-ab8e-23b2e8d021c9",
+								"invite"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/9007bc99-9317-4f33-8c6a-ea8878d6b2d4/invite",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"9007bc99-9317-4f33-8c6a-ea8878d6b2d4",
+										"invite"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:46:02 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "8aZV4c30RV2Nx4UvAXC71g"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "404 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/b2c0d7e6-c4a9-4e2d-b351-eb4c1e6d5a894/invite",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"b2c0d7e6-c4a9-4e2d-b351-eb4c1e6d5a894",
+										"invite"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:47:35 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1e-2NeRcg5w6sJxmMViLtHPA5HUSmU\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "pWtwmE5CQd-kgL69V7rehQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Batch not found.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/4905a55c-fa6a-430e-ab8e-23b2e8d021c9/invite",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"4905a55c-fa6a-430e-ab8e-23b2e8d021c9",
+										"invite"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:48:26 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c4-L9th0jKXKkFzVIfDZkZ1+i29pUU\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "98dZdFzYQLW7DVU9V7rehQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"91f35149-0e37-4cff-a9cb-70922c0a08dd\",\n    \"batch_id\": \"4905a55c-fa6a-430e-ab8e-23b2e8d021c9\",\n    \"token\": \"ac7c4a5d49e9f9c0bb0a79ef6ffe614c\",\n    \"created_at\": \"2026-05-07T10:48:26.391Z\",\n    \"expires_at\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Join Batch With Invite Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNWFhZTFkYi0zZDM1LTRjYWItYWI0ZS1jYzhhNDU2MzEwZTAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc3ODE0NDAyNCwiZXhwIjoxNzc4NzQ4ODI0fQ.-F7RlwrtPsTBjgAsz25mt-UKGMBLLG1IH2UDKOd1n0Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"ac7c4a5d49e9f9c0bb0a79ef6ffe614c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/batches/join",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"batches",
+								"join"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"ac7c4a5d49e9f9c0bb0a79ef6ffe614c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/join",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"join"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:50:20 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"bb-t2nXoZnI3WAvT4eMIYMZ2LE1U2E\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "yCkAenwRRM6vxgAz-8Y8hA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"139b54b9-d351-4602-8773-ebf021c53325\",\n    \"batch_id\": \"4905a55c-fa6a-430e-ab8e-23b2e8d021c9\",\n    \"student_id\": \"e5aae1db-3d35-4cab-ab4e-cc8a456310e0\",\n    \"created_at\": \"2026-05-07T10:50:20.474Z\"\n}"
+						},
+						{
+							"name": "404 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"ac7c4a5d49e9f9ef6ffe614c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/join",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"join"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:51:04 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1f-bbuTnkuRVohn+2Jzzx3lEeaGWK8\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "woAfoyWTSSSnkXuF-8Y8hA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invite not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Batch List For Current User's Institution",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMjRhYTlmNC02NTYxLTRhNGQtOWNkNi1iZThlYmY0MDAxM2IiLCJyb2xlIjoiaW5zdGl0dXRpb24iLCJpYXQiOjE3NzgxNTEzOTgsImV4cCI6MTc3ODc1NjE5OH0.7DVGzTjfTwIHzjr_Gg1nBeu6H1lLl6HLNJI37nVr_AU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/batches",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"batches"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:51:59 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "TQPsTt2OR8eARPW9-8Y8hA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2357"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:55:23 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"935-OZzQfpOkzTlzhQCC136FFK+Qo2U\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "mKn9cLQUQw6B5xyCacI7Nw"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"eb6fc055-bad9-4939-86a7-c11819d76bfe\",\n        \"name\": \"Batch 1\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"2aced535-25a0-4f0c-b420-311adfa6a8a2\",\n        \"created_at\": \"2026-05-06T14:02:49.054Z\",\n        \"creator\": {\n            \"id\": \"2aced535-25a0-4f0c-b420-311adfa6a8a2\",\n            \"name\": \"Trainer 1\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    },\n    {\n        \"id\": \"41567f8f-5627-422a-a9ae-910107258ddb\",\n        \"name\": \"Batch 4\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"5f611480-e12a-47f7-9d2f-dddf41083c1c\",\n        \"created_at\": \"2026-05-06T14:02:53.453Z\",\n        \"creator\": {\n            \"id\": \"5f611480-e12a-47f7-9d2f-dddf41083c1c\",\n            \"name\": \"Trainer 4\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    },\n    {\n        \"id\": \"9007bc99-9317-4f33-8c6a-ea8878d6b2d4\",\n        \"name\": \"Batch A\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"e80d41c8-90e2-43fc-aa6e-976d066c6ac3\",\n        \"created_at\": \"2026-05-06T21:06:22.863Z\",\n        \"creator\": {\n            \"id\": \"e80d41c8-90e2-43fc-aa6e-976d066c6ac3\",\n            \"name\": \"Chai Tzu\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    },\n    {\n        \"id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n        \"name\": \"Batch I\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"created_at\": \"2026-05-07T10:33:46.511Z\",\n        \"creator\": {\n            \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n            \"name\": \"Rishi Bhat\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    },\n    {\n        \"id\": \"4905a55c-fa6a-430e-ab8e-23b2e8d021c9\",\n        \"name\": \"Batch INK\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"created_at\": \"2026-05-07T10:34:29.034Z\",\n        \"creator\": {\n            \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n            \"name\": \"Rishi Bhat\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    },\n    {\n        \"id\": \"439253bb-e800-4aac-b295-61fcc750c1bd\",\n        \"name\": \"Batch J\",\n        \"institution_id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n        \"created_by\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"created_at\": \"2026-05-07T10:44:51.107Z\",\n        \"creator\": {\n            \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n            \"name\": \"Rishi Bhat\",\n            \"role\": \"trainer\"\n        },\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Batch Summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMjRhYTlmNC02NTYxLTRhNGQtOWNkNi1iZThlYmY0MDAxM2IiLCJyb2xlIjoiaW5zdGl0dXRpb24iLCJpYXQiOjE3NzgxNTEzOTgsImV4cCI6MTc3ODc1NjE5OH0.7DVGzTjfTwIHzjr_Gg1nBeu6H1lLl6HLNJI37nVr_AU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/batches/9007bc99-9317-4f33-8c6a-ea8878d6b2d4/summary",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"batches",
+								"9007bc99-9317-4f33-8c6a-ea8878d6b2d4",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/batches/9007bc99-9317-4f33-8c6a-ea8878d6b2d4/summary",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"batches",
+										"9007bc99-9317-4f33-8c6a-ea8878d6b2d4",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "461"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:58:15 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1cd-em1mDNoFV3GSJ0oneoznJzJWCn4\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "J3vzPXRkRx2XbbtIacI7Nw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"batch_id\": \"9007bc99-9317-4f33-8c6a-ea8878d6b2d4\",\n    \"name\": \"Batch A\",\n    \"created_at\": \"2026-05-06T21:06:22.863Z\",\n    \"created_by\": {\n        \"id\": \"e80d41c8-90e2-43fc-aa6e-976d066c6ac3\",\n        \"name\": \"Chai Tzu\",\n        \"role\": \"trainer\"\n    },\n    \"summary\": [\n        {\n            \"session\": {\n                \"id\": \"3c759c7a-0bc1-4517-a364-6471e09510a3\",\n                \"title\": \"AI basics\",\n                \"start_time\": \"2026-05-07T06:30:00.000Z\",\n                \"end_time\": \"2026-05-07T09:00:00.000Z\",\n                \"created_at\": \"2026-05-06T22:31:11.511Z\"\n            },\n            \"total_students\": 1,\n            \"present\": 1,\n            \"absent\": 0,\n            \"late\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Create Session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MTQ1OCwiZXhwIjoxNzc4NzU2MjU4fQ.9GVxwxp8z8d5wFlcXUdD2sOjBX4J4zrX98G1jCtCO_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"batch_id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n    \"title\": \"Python Funda\",\n    \"date\": \"2026-05-08 03:00:00\",\n    \"start_time\": \"2026-05-07 12:00:00\",\n    \"end_time\": \"2026-05-07 14:30:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/sessions",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"batch_id\": \"9007bc99-9317-4f33-8c6a-ea8878d6b2d4\",\n    \"title\": \"Python Funda\",\n    \"date\": \"2026-05-08 03:00:00\",\n    \"start_time\": \"2026-05-07 12:00:00\",\n    \"end_time\": \"2026-05-07 14:30:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/sessions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:00:12 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "9qWBvBtpReGrfSlaDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "Success  Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"batch_id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n    \"title\": \"Python Funda\",\n    \"date\": \"2026-05-08 03:00:00\",\n    \"start_time\": \"2026-05-07 12:00:00\",\n    \"end_time\": \"2026-05-07 14:30:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/sessions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "322"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:04:36 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"142-LBTV3W+2Cv5yLKMQxGHgF4/2mbI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "XkYZTlCzTgKoiulfVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa\",\n    \"batch_id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n    \"trainer_id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n    \"title\": \"Python Funda\",\n    \"date\": \"2026-05-08T03:00:00.000Z\",\n    \"start_time\": \"2026-05-07T12:00:00.000Z\",\n    \"end_time\": \"2026-05-07T14:30:00.000Z\",\n    \"created_at\": \"2026-05-07T11:04:36.312Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Sessions List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MTQ1OCwiZXhwIjoxNzc4NzU2MjU4fQ.9GVxwxp8z8d5wFlcXUdD2sOjBX4J4zrX98G1jCtCO_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/sessions",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/sessions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "471"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:07:03 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1d7-mzpy5nvx+H0yCvsgR7ZJ62+0Vow\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "Y1LXLX1kSNmERA0yacI7Nw"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa\",\n        \"batch_id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n        \"trainer_id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"title\": \"Python Funda\",\n        \"date\": \"2026-05-08T03:00:00.000Z\",\n        \"start_time\": \"2026-05-07T12:00:00.000Z\",\n        \"end_time\": \"2026-05-07T14:30:00.000Z\",\n        \"created_at\": \"2026-05-07T11:04:36.312Z\",\n        \"batch\": {\n            \"id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n            \"name\": \"Batch I\"\n        },\n        \"trainer\": {\n            \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n            \"name\": \"Rishi Bhat\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Session Attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1MjkyM2RiZS1mYjZkLTQ3OWYtYWJmMy04NzdkM2Q4NmZiMGYiLCJyb2xlIjoidHJhaW5lciIsImlhdCI6MTc3ODE1MTQ1OCwiZXhwIjoxNzc4NzU2MjU4fQ.9GVxwxp8z8d5wFlcXUdD2sOjBX4J4zrX98G1jCtCO_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/sessions/4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa/attendance",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sessions",
+								"4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa",
+								"attendance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Forbidden Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/sessions/3c759c7a-0bc1-4517-a364-6471e09510a3/attendance",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sessions",
+										"3c759c7a-0bc1-4517-a364-6471e09510a3",
+										"attendance"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:08:35 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "hAoyhme1SvCjR2iS-8Y8hA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/sessions/4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa/attendance",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sessions",
+										"4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa",
+										"attendance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:09:39 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"15a-EH8rtisIeaDz4jHIFhBXXA7aGBI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "1lrwtYDZRC2ejiqkAXC71g"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"4dab1bff-3bf6-497e-ac4d-0ad9d7831dfa\",\n    \"title\": \"Python Funda\",\n    \"batch\": {\n        \"id\": \"c07e2aea-0a3e-4ff5-99d5-221507be8fc7\",\n        \"name\": \"Batch I\"\n    },\n    \"trainer\": {\n        \"id\": \"52923dbe-fb6d-479f-abf3-877d3d86fb0f\",\n        \"name\": \"Rishi Bhat\"\n    },\n    \"date\": \"2026-05-08T03:00:00.000Z\",\n    \"created_at\": \"2026-05-07T11:04:36.312Z\",\n    \"attendance\": {\n        \"total\": 0,\n        \"present\": 0,\n        \"absent\": 0,\n        \"late\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Mark Attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNWFhZTFkYi0zZDM1LTRjYWItYWI0ZS1jYzhhNDU2MzEwZTAiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc3ODE0NDAyNCwiZXhwIjoxNzc4NzQ4ODI0fQ.-F7RlwrtPsTBjgAsz25mt-UKGMBLLG1IH2UDKOd1n0Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session_id\": \"ab78f395-c434-4019-9f58-28a4f01dd057\",\n    \"status\": \"present\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/attendance/mark",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"attendance",
+								"mark"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"session_id\": \"3c759c7a-0bc1-4517-a364-6471e09510a3\",\n    \"status\": \"present\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/attendance/mark",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"attendance",
+										"mark"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 10:38:44 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "dobppkObRSioe1aQAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"session_id\": \"ab78f395-c434-4019-9f58-28a4f01dd057\",\n    \"status\": \"present\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/attendance/mark",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"attendance",
+										"mark"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:23:25 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"cf-ZqrqGwV1BqclzJDUYJL1/qXhFDc\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "F42IolR2Q7alOILyVOLIQQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f686cd99-00be-4fec-9ff8-c0a000f7ecf4\",\n    \"session_id\": \"ab78f395-c434-4019-9f58-28a4f01dd057\",\n    \"student_id\": \"e5aae1db-3d35-4cab-ab4e-cc8a456310e0\",\n    \"status\": \"present\",\n    \"marked_at\": \"2026-05-07T11:23:25.278Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Summary",
+			"item": [
+				{
+					"name": "Institution level summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmIwM2EyMC0wMjU4LTQ3YTgtYjkxMS0xYTlhMzMxNTMxYzYiLCJyb2xlIjoicHJvZ3JhbW1lX21hbmFnZXIiLCJpYXQiOjE3NzgxNTM1NTEsImV4cCI6MTc3ODc1ODM1MX0.beE56hzAdZW5RDafoe0MAfLuCXIcwGUfaajIZ0DAZ80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/summary/institutions",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"summary",
+								"institutions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/summary/institutions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"summary",
+										"institutions"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:31:29 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "342fDTrmT2ifs0bgipRofQ"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/summary/institutions",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"summary",
+										"institutions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "669"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:33:31 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"29d-dAh57fmwfcW/3NH4O2sC79tkvYI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "QmxuXSRcSOWnl7vyipRofQ"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"institution\": {\n            \"id\": \"f6cb745a-233b-4b3b-96d4-4a2c85ecbef3\",\n            \"name\": \"North Skill Academy\",\n            \"region\": \"north\"\n        },\n        \"metrics\": {\n            \"total_batches\": 6,\n            \"total_students\": 8,\n            \"total_sessions\": 6,\n            \"attendance\": {\n                \"present\": 3,\n                \"absent\": 2,\n                \"late\": 1\n            }\n        }\n    },\n    {\n        \"institution\": {\n            \"id\": \"27865f06-7a6b-432e-8967-ccbfa0cf7998\",\n            \"name\": \"South Future Institute\",\n            \"region\": \"south\"\n        },\n        \"metrics\": {\n            \"total_batches\": 2,\n            \"total_students\": 6,\n            \"total_sessions\": 2,\n            \"attendance\": {\n                \"present\": 1,\n                \"absent\": 2,\n                \"late\": 1\n            }\n        }\n    },\n    {\n        \"institution\": {\n            \"id\": \"f782cf0a-2b0e-4fbd-a2e7-49d05092987a\",\n            \"name\": \"East Tech Center\",\n            \"region\": \"east\"\n        },\n        \"metrics\": {\n            \"total_batches\": 3,\n            \"total_students\": 3,\n            \"total_sessions\": 1,\n            \"attendance\": {\n                \"present\": 1,\n                \"absent\": 0,\n                \"late\": 1\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Programme Summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNmIwM2EyMC0wMjU4LTQ3YTgtYjkxMS0xYTlhMzMxNTMxYzYiLCJyb2xlIjoicHJvZ3JhbW1lX21hbmFnZXIiLCJpYXQiOjE3NzgxNDQwODQsImV4cCI6MTc3ODc0ODg4NH0.qA3P6y3n-B64Klo5wLJFvmrepZLUZYYfUyQLJFBz5HM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/api/v1/summary/programme",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"summary",
+								"programme"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/summary/programme",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"summary",
+										"programme"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:35:24 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"81-spVkWlOQBxL8dlz5arrH3irisyg\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "pP-kQy7nTXSHu7ILDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total_institutions\": 3,\n    \"total_batches\": 11,\n    \"total_students\": 17,\n    \"total_sessions\": 9,\n    \"attendance\": {\n        \"present\": 5,\n        \"absent\": 4,\n        \"late\": 3\n    }\n}"
+						},
+						{
+							"name": "403 Error Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{railwayURL}}/api/v1/summary/programme",
+									"host": [
+										"{{railwayURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"summary",
+										"programme"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2026 11:35:57 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"18-J8xZO+K5GGG7SlhYsuRkzIHE/yA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "lgzUhlbGTgePYse7DcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Forbidden.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{railwayURL}}/health",
+					"host": [
+						"{{railwayURL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health Check Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{railwayURL}}/health",
+							"host": [
+								"{{railwayURL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 May 2026 11:38:29 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"25-FQ7A6y+NT+zHs1JvRlr12Pl3TBI\""
+						},
+						{
+							"key": "Server",
+							"value": "railway-edge"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Railway-Edge",
+							"value": "railway/asia-southeast1-eqsg3a"
+						},
+						{
+							"key": "X-Railway-Request-Id",
+							"value": "6F5O6KYmSqukSxgnAXC71g"
+						}
+					],
+					"cookie": [],
+					"body": "Assignment Management System is Live!"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localURL",
+			"value": "http//:localhost:8000"
+		},
+		{
+			"key": "railwayURL",
+			"value": "https://attendance-management-system-production-2bac.up.railway.app"
+		}
+	]
+}
