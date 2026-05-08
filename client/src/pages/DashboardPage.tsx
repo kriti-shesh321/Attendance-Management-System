@@ -28,6 +28,11 @@ function DashboardPage() {
                 setData(response.data);
             }
 
+            else if (user.role === "programme_manager") {
+                const response = await API.get("/summary/institutions");
+                setData(response.data);
+            }
+
             else {
                 const response = await API.get("/summary/programme");
                 setData(response.data);
