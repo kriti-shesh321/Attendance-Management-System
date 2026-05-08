@@ -191,18 +191,28 @@ export const joinBatch = async (
             return res.status(404).json({ message: "Invite not found." });
         }
 
-        const existingEntry =
-            await prisma.batchStudent.findFirst(
-                {
-                    where: {
-                        batch_id: invite.batch_id,
-                        student_id: req.user!.userId,
-                    },
-                }
-            );
+        if (
+            invite.expires_at &&
+            invite.expires_at < new Date()
+        ) {
+            return res.status(400).json({
+                message:
+                    "Invite token expired.",
+            });
+        }
 
-        if (existingEntry) {
-            return res.status(409).json({ message: "Already joined batch." });
+        const existingBatch =
+            await prisma.batchStudent.findFirst({
+                where: {
+                    student_id: req.user!.userId,
+                },
+            });
+
+        if (existingBatch) {
+            return res.status(409).json({
+                message:
+                    "Student already belongs to a batch.",
+            });
         }
 
         const batchStudent =
